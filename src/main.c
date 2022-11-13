@@ -23,8 +23,10 @@ int main(void)
 
     printf("buffer: \n%s\n\n", envstr);
     env_str_hndlr(envstr);
-    char *env = getenv("EXAMPLE");
-    printf("EXAMPLE=%s\n", env);
+    char *exmp = getenv("EXAMPLE");
+    char *key = getenv("KEY");
+    printf("EXAMPLE=%s\n", exmp);
+    printf("KEY=%s\n", key);
 
     return EXIT_SUCCESS;
 }
