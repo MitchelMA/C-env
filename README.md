@@ -18,7 +18,7 @@ char buffer[BUF_SIZE] = {0};
     "BUF_SIZE". 
 */
 if(!readff(".env", buffer, BUF_SIZE))
-    return
+    return;
 /* Put the content-string into the env variables. */
 if(!env_str_hndlr(buffer))
     return;
