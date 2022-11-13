@@ -76,10 +76,18 @@ char **_envstr_to_evnvars(const char *env_str, size_t *varcount)
         *varcount = 0;
         return NULL;
     }
-    if(env_str[0] == '\n') return NULL;
+    if(env_str[0] == '\n') 
+    {
+        *varcount = 0;
+        return NULL;
+    }
 
     lines = _str_getlinecnt(env_str);
-    if(lines == 0) return 0;
+    if(lines == 0) 
+    {
+        *varcount = 0;
+        return NULL;
+    }
 
     // lexing the env strings
     char buffer[256] = {0};
