@@ -1,4 +1,4 @@
-CC := gcc
+CC := clang
 CFLAGS := -Wall -pedantic -std=c17
 OBJS := src/main.o \
 src/env/envhelper.o
